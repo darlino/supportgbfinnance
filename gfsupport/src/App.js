@@ -4,6 +4,7 @@ import { Compte } from './components/views/Compte/Compte'
 import {Login} from './components/admin/auth/Login'
 import { Dashboard } from './components/admin/Views/dashboard'
 import {PrivateRoute} from './ProtectedRoute'
+
 function App() {
   return (
     <div className="App">
