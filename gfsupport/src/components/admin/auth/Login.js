@@ -51,10 +51,10 @@ export const Login = (props) => {
                 }
                 else{
                     swal({
-                        title: "Good job!",
-                        text: "You clicked the button!",
+                        title: "Erreur",
+                        text: "Vos informations sont erronées",
                         icon: "error",
-                        button: "Aww yiss!",
+                        button: "Ok",
                       });
                 }
             })
