@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProSidebar, Menu, MenuItem, SubMenu,SidebarHeader } from 'react-pro-sidebar';
-import { useHistory, useLocation } from "react-router-dom";
+
 import { Link } from 'react-router-dom'
 import { BsCreditCard} from 'react-icons/bs'
 import { BiUser , BiSupport ,BiMenuAltLeft} from 'react-icons/bi';
@@ -8,17 +8,15 @@ import { AiOutlineSetting, AiFillBank , AiOutlineDashboard} from 'react-icons/ai
 import 'react-pro-sidebar/dist/css/styles.css';
 
 export const Sidebar = () => {
-    const [collapse, setCollapse] = React.useState(false)
-    const history = useHistory();
-    const location = useLocation();
+    const [collapse, setCollapse] = React.useState(true)
     return (
-        <ProSidebar >
+        <ProSidebar collapse={collapse}>
             <SidebarHeader className="p-4 text-center text-truncate d-flex justify-content-between">
                 <BiMenuAltLeft onClick={() => setCollapse(!collapse)} style={{ fontWeight: "bold", cursor: "pointer"}}/>
             </SidebarHeader>
             <Menu iconShape="circle">
                 <MenuItem icon={<AiOutlineDashboard />}>Dashboard
-                    <Link to="/admin/users"/>
+                    <Link to="/admin/dashboard"/>
                 </MenuItem>
                 <MenuItem icon={<BiUser />}>Utilisateur
                     <Link to="/admin/users"/>
